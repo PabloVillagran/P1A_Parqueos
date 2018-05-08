@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDManager\AbstractManager.cs" />
+    <Compile Include="BDEntity\Estacionamiento.cs" />
+    <Compile Include="BDEntity\MovimientoTransaccion.cs" />
+    <Compile Include="BDEntity\Tarifa.cs" />
+    <Compile Include="BDEntity\TiempoTarifa.cs" />
+    <Compile Include="BDEntity\TipoVehiculo.cs" />
+    <Compile Include="BDEntity\Transaccion.cs" />
+    <Compile Include="BDEntity\Ubicacion.cs" />
+    <Compile Include="BDEntity\VehiculoCliente.cs" />
+    <Compile Include="BDManager\EstacionamientoManager.cs" />
+    <Compile Include="BDManager\MovimientoTransaccionManager.cs" />
+    <Compile Include="BDManager\TarifaManager.cs" />
+    <Compile Include="BDManager\TiempoTarifaManager.cs" />
+    <Compile Include="BDManager\TipoVehiculoManager.cs" />
+    <Compile Include="BDManager\TransaccionManager.cs" />
+    <Compile Include="BDManager\UbicacionManager.cs" />
+    <Compile Include="BDManager\VehiculoClienteManager.cs" />
+    <Compile Include="Common\Utils.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,9 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BDModel\" />
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
