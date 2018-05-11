@@ -11,7 +11,7 @@ namespace GestionParqueo.Common
     {
         public static MySqlConnection getConnection()
         {
-            String connectionString = "SERVER=127.0.0.1;DATABASE=estacionamiento;";
+            String connectionString = "SERVER=127.0.0.1;DATABASE=estacionamiento;UID=root;SslMode=none";
             return new MySqlConnection(connectionString);
         }
     }

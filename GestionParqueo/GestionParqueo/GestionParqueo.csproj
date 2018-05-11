@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbcEstacionamientosForm.cs">
+    <Compile Include="Forms\Configuraciones\AbcEstacionamientosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbcEstacionamientosForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AbcEstacionamientosForm.Designer.cs">
       <DependentUpon>AbcEstacionamientosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbcTarifasGeneralForm.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasGeneralForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbcTarifasGeneralForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasGeneralForm.Designer.cs">
       <DependentUpon>AbcTarifasGeneralForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbcTarifasTiempoForm.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasTiempoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbcTarifasTiempoForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasTiempoForm.Designer.cs">
       <DependentUpon>AbcTarifasTiempoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbcTarifasVehiculoForm.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasVehiculoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbcTarifasVehiculoForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AbcTarifasVehiculoForm.Designer.cs">
       <DependentUpon>AbcTarifasVehiculoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbcUbicacionForm.cs">
+    <Compile Include="Forms\Configuraciones\AbcUbicacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbcUbicacionForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AbcUbicacionForm.Designer.cs">
       <DependentUpon>AbcUbicacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BDManager\AbstractManager.cs" />
@@ -93,58 +93,70 @@
     <Compile Include="BDManager\TransaccionManager.cs" />
     <Compile Include="BDManager\UbicacionManager.cs" />
     <Compile Include="BDManager\VehiculoClienteManager.cs" />
-    <Compile Include="BuscarClienteForm.cs">
+    <Compile Include="Forms\Configuraciones\AgregarTipoVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarClienteForm.Designer.cs">
+    <Compile Include="Forms\Configuraciones\AgregarTipoVehiculo.Designer.cs">
+      <DependentUpon>AgregarTipoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info.General\BuscarClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info.General\BuscarClienteForm.Designer.cs">
       <DependentUpon>BuscarClienteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalcularTarifaForm.cs">
+    <Compile Include="Forms\Info.General\CalcularTarifaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalcularTarifaForm.Designer.cs">
+    <Compile Include="Forms\Info.General\CalcularTarifaForm.Designer.cs">
       <DependentUpon>CalcularTarifaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CobrosMensualesForm.cs">
+    <Compile Include="Forms\Info.General\CobrosMensualesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CobrosMensualesForm.Designer.cs">
+    <Compile Include="Forms\Info.General\CobrosMensualesForm.Designer.cs">
       <DependentUpon>CobrosMensualesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\Utils.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IngresoForm.cs">
+    <Compile Include="Forms\Acciones\IngresoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngresoForm.Designer.cs">
+    <Compile Include="Forms\Acciones\IngresoForm.Designer.cs">
       <DependentUpon>IngresoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovimientoCajaForm.cs">
+    <Compile Include="Forms\Info.General\MovimientoCajaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovimientoCajaForm.Designer.cs">
+    <Compile Include="Forms\Info.General\MovimientoCajaForm.Designer.cs">
       <DependentUpon>MovimientoCajaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PartidaForm.cs">
+    <Compile Include="Forms\Acciones\PartidaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PartidaForm.Designer.cs">
+    <Compile Include="Forms\Acciones\PartidaForm.Designer.cs">
       <DependentUpon>PartidaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Configuraciones\AbcTarifasVehiculoForm.resx">
+      <DependentUpon>AbcTarifasVehiculoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IngresoForm.resx">
+    <EmbeddedResource Include="Forms\Configuraciones\AgregarTipoVehiculo.resx">
+      <DependentUpon>AgregarTipoVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Acciones\IngresoForm.resx">
       <DependentUpon>IngresoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PartidaForm.resx">
+    <EmbeddedResource Include="Forms\Acciones\PartidaForm.resx">
       <DependentUpon>PartidaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
