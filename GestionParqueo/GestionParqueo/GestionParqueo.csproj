@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbcEstacionamientosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbcEstacionamientosForm.Designer.cs">
+      <DependentUpon>AbcEstacionamientosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbcTarifasGeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbcTarifasGeneralForm.Designer.cs">
+      <DependentUpon>AbcTarifasGeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbcTarifasTiempoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbcTarifasTiempoForm.Designer.cs">
+      <DependentUpon>AbcTarifasTiempoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbcTarifasVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbcTarifasVehiculoForm.Designer.cs">
+      <DependentUpon>AbcTarifasVehiculoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbcUbicacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbcUbicacionForm.Designer.cs">
+      <DependentUpon>AbcUbicacionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BDManager\AbstractManager.cs" />
     <Compile Include="BDEntity\Estacionamiento.cs" />
     <Compile Include="BDEntity\MovimientoTransaccion.cs" />
@@ -63,6 +93,24 @@
     <Compile Include="BDManager\TransaccionManager.cs" />
     <Compile Include="BDManager\UbicacionManager.cs" />
     <Compile Include="BDManager\VehiculoClienteManager.cs" />
+    <Compile Include="BuscarClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarClienteForm.Designer.cs">
+      <DependentUpon>BuscarClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcularTarifaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalcularTarifaForm.Designer.cs">
+      <DependentUpon>CalcularTarifaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CobrosMensualesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CobrosMensualesForm.Designer.cs">
+      <DependentUpon>CobrosMensualesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\Utils.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -70,10 +118,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngresoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoForm.Designer.cs">
+      <DependentUpon>IngresoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovimientoCajaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovimientoCajaForm.Designer.cs">
+      <DependentUpon>MovimientoCajaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartidaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartidaForm.Designer.cs">
+      <DependentUpon>PartidaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoForm.resx">
+      <DependentUpon>IngresoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartidaForm.resx">
+      <DependentUpon>PartidaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
