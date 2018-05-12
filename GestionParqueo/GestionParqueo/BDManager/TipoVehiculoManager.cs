@@ -11,7 +11,23 @@ namespace GestionParqueo.BDManager
     {
         public override void Delete(TipoVehiculo o)
         {
-            throw new NotImplementedException();
+            Connect();
+            sql = "DELETE FROM tipo_vehiculo WHERE id = @id; ";
+            Connect();
+            try
+            {
+                commando = new MySql.Data.MySqlClient.MySqlCommand(sql, con);
+                commando.Parameters.AddWithValue("@id", o.Id);
+                commando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar el registro. " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
 
         public override object Insert(TipoVehiculo o)
@@ -31,6 +47,10 @@ namespace GestionParqueo.BDManager
             catch (Exception ex)
             {
                 throw new Exception("Error al insertar el registro. " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
             }
         }
 
@@ -60,11 +80,36 @@ namespace GestionParqueo.BDManager
             {
                 throw new Exception("Error al seleccionar tipos de vehiculo." + ex.Message);
             }
+            finally
+            {
+                Disconnect();
+            }
         }
 
         public override void Update(TipoVehiculo o)
         {
-            throw new NotImplementedException();
+            sql = "UPDATE tipo_vehiculo SET formato_placa = @formatoPlaca," +
+                " espacio = @espacio, factor_tarifa = @factorTarifa, descripcion = @descripcion " +
+                "WHERE id = @id; ";
+            Connect();
+            try
+            {
+                commando = new MySql.Data.MySqlClient.MySqlCommand(sql, con);
+                commando.Parameters.AddWithValue("@formato", o.FormatoPlaca);
+                commando.Parameters.AddWithValue("@espacio", o.Espacio);
+                commando.Parameters.AddWithValue("@factor", o.FactorTarifa);
+                commando.Parameters.AddWithValue("@descripcion", o.Descripcion);
+                commando.Parameters.AddWithValue("@id", o.Id);
+                commando.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al actualizar el registro. " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
     }
 }

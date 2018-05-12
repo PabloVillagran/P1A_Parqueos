@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2018 at 08:41 AM
+-- Generation Time: May 12, 2018 at 02:24 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -70,7 +70,7 @@ CREATE TABLE `tarifa` (
 
 CREATE TABLE `tiempo_tarifa` (
   `id` int(11) NOT NULL,
-  `factor_tarifa` decimal(10,0) NOT NULL,
+  `factor_tarifa` decimal(10,2) NOT NULL,
   `descripcion` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -83,10 +83,22 @@ CREATE TABLE `tiempo_tarifa` (
 CREATE TABLE `tipo_vehiculo` (
   `id` int(11) NOT NULL,
   `formato_placa` varchar(512) NOT NULL,
-  `espacio` decimal(10,0) DEFAULT NULL,
-  `factor_tarifa` decimal(10,0) NOT NULL,
+  `espacio` decimal(10,2) DEFAULT NULL,
+  `factor_tarifa` decimal(10,2) NOT NULL,
   `descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tipo_vehiculo`
+--
+
+INSERT INTO `tipo_vehiculo` (`id`, `formato_placa`, `espacio`, `factor_tarifa`, `descripcion`) VALUES
+(2, 'PBBB000', '7.00', '1.00', 'Sedán'),
+(4, 'MBBB000', '2.00', '0.50', 'Motos'),
+(6, 'asdf', '2.00', '2.00', 'asddf'),
+(7, 'asdf', '2.00', '2.00', 'asddf'),
+(8, 'asdf', '6.00', '5.00', 'test'),
+(9, 'asdf', '52.00', '12.00', 'test3');
 
 -- --------------------------------------------------------
 
@@ -95,13 +107,13 @@ CREATE TABLE `tipo_vehiculo` (
 --
 
 CREATE TABLE `transaccion` (
-  `serie` varchar(8) NOT NULL,
-  `folio` int(11) NOT NULL,
+  `serie` int(11) NOT NULL,
+  `folio` varchar(8) NOT NULL,
   `correlativo` int(11) NOT NULL,
   `id_tarifa` int(11) NOT NULL,
-  `monto_total` int(11) NOT NULL,
-  `hist_tarifa_vehiculo` int(11) NOT NULL,
-  `hist_tarifa_tiempo` int(11) NOT NULL,
+  `monto_total` double NOT NULL,
+  `hist_tarifa_vehiculo` decimal(10,2) NOT NULL,
+  `hist_tarifa_tiempo` decimal(10,2) NOT NULL,
   `u_estacionamiento` int(11) NOT NULL,
   `u_sector` varchar(16) NOT NULL,
   `u_numero` int(11) NOT NULL,
@@ -218,11 +230,17 @@ ALTER TABLE `tiempo_tarifa`
 -- AUTO_INCREMENT for table `tipo_vehiculo`
 --
 ALTER TABLE `tipo_vehiculo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `movimiento_transaccion`
+--
+ALTER TABLE `movimiento_transaccion`
+  ADD CONSTRAINT `movimiento_transaccion_ibfk_1` FOREIGN KEY (`serie`,`folio`,`correlativo`) REFERENCES `transaccion` (`serie`, `folio`, `correlativo`);
 
 --
 -- Constraints for table `tarifa`
